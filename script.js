@@ -13,12 +13,6 @@ const home = document.getElementById("home");
 const formArea = document.getElementById("formArea");
 const postForm = document.getElementById("postForm");
 
-home.addEventListener("click", (e) => {
-  const button = e.target.closest("[data-form]");
-  if (!button) return;
-  showForm(button.dataset.form);
-});
-
 function partOptions() {
   return PARTS.map(p => `<option value="${p}">${p}</option>`).join("");
 }
@@ -35,7 +29,6 @@ function showForm(kind) {
   const commonHeader = `
     <div class="form-header">
       <div><h2>${formInfo[kind].title}</h2>${kind === "join" ? "" : "<p>必要事項を入力のうえ、送信ボタンを押してください。</p>"}</div>
-      <button type="button" class="back-button" onclick="goHome()">← 選択画面に戻る</button>
     </div>`;
 
   let body = "";
@@ -233,3 +226,5 @@ function confirmSubmit() {
     form.reset();
   }, 1500);
 }
+
+showForm("join");
