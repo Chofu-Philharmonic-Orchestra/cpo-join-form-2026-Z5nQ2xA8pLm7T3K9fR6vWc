@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>各種届け出フォーム</title>
+  <title>入団届け出フォーム</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,18 +13,13 @@
     <img src="logo.png" alt="調布フィルハーモニー管弦楽団" class="logo">
   </div>
 
-  <h1>各種届け出フォーム</h1>
-  <p>該当する届け出を選択し、必要事項を入力してください。</p>
+  <h1>入団届出フォーム</h1>
+  <p>必要事項を入力してください。</p>
 </header>
 
-    <section id="home" class="card-grid" aria-label="届け出の種類を選択">
-      <button class="menu-card" data-form="join"><span>入団届</span></button>
-      <button class="menu-card" data-form="leave"><span>休団届</span></button>
-      <button class="menu-card" data-form="return"><span>復団届</span></button>
-      <button class="menu-card" data-form="quit"><span>退団届</span></button>
-    </section>
-
-    <section id="formArea" class="form-card hidden"></section>
+    <section id="home" class="hidden"></section>
+    
+    <section id="formArea" class="form-card"></section>
   </main>
 
   <iframe name="sendFrame" id="sendFrame" class="hidden" title="送信用フレーム"></iframe>
