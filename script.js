@@ -14,7 +14,8 @@ const formArea = document.getElementById("formArea");
 const postForm = document.getElementById("postForm");
 
 function partOptions() {
-  return PARTS.map(p => `<option value="${p}">${p}</option>`).join("");
+  return `<option value="" selected disabled>選択してください</option>` +
+    PARTS.map(p => `<option value="${p}">${p}</option>`).join("");
 }
 
 function today() {
